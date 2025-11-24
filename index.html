@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Minnicks Online Refresh – Website & Digital Presence Package</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Proposal for modern website, loyalty system, and local SEO for Minnicks Drive Thru."
+  />
+  <style>
+    :root {
+      --bg: #0b0b0f;
+      --bg-alt: #14141c;
+      --accent: #f04b3c;
+      --accent-soft: #ffb347;
+      --text-main: #f7f7ff;
+      --text-muted: #a7a7c2;
+      --card-bg: #191922;
+      --border-subtle: #2a2a37;
+      --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.4);
+      --radius-lg: 18px;
+      --radius-xl: 28px;
+      --transition-fast: 0.2s ease;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #181827 0, #050509 55%, #000 100%);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(5, 5, 9, 0.92), rgba(5, 5, 9, 0.7), transparent);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .logo-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #ffcf71, #f04b3c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.95rem;
+      box-shadow: 0 0 0 2px rgba(5, 5, 9, 0.9), 0 10px 30px rgba(0, 0, 0, 0.6);
+    }
+
+    .nav-title {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-title-main {
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    .nav-title-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      padding: 0.35rem 0.6rem;
+      border-radius: 999px;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+      transition: color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .nav-cta {
+      padding: 0.45rem 0.95rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #ffb347, #f04b3c);
+      color: #161314;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), filter var(--transition-fast);
+    }
+
+    .nav-cta span.arrow {
+      font-size: 0.95rem;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.05);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .section {
+      padding: 2.5rem 1.25rem;
+    }
+
+    .section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding-top: 2.75rem;
+      padding-bottom: 2.5rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 2rem;
+    }
+
+    @media (min-width: 840px) {
+      .hero-grid {
+        grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+        align-items: center;
+      }
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.2rem 0.75rem 0.2rem 0.2rem;
+      border-radius: 999px;
+      background: rgba(240, 75, 60, 0.12);
+      border: 1px solid rgba(240, 75, 60, 0.4);
+      color: var(--accent-soft);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.25rem;
+    }
+
+    .eyebrow-dot {
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      background:
+        radial-gradient(circle at 30% 30%, #ffdf9a, #f04b3c);
+      box-shadow: 0 0 0 3px rgba(240, 75, 60, 0.4);
+    }
+
+    .hero-title {
+      font-size: clamp(2rem, 3vw + 1rem, 3rem);
+      line-height: 1.05;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-title span.accent {
+      background: linear-gradient(135deg, #ffb347, #ffdf9a);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 28px rgba(255, 180, 71, 0.32);
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      max-width: 32rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .btn-primary {
+      padding: 0.75rem 1.3rem;
+      border-radius: 999px;
+      border: none;
+      background: linear-gradient(135deg, #ffb347, #f04b3c);
+      color: #161314;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      box-shadow: var(--shadow-soft);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast), filter var(--transition-fast);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.06);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+    }
+
+    .btn-secondary {
+      padding: 0.7rem 1.15rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(12, 12, 20, 0.8);
+      color: var(--text-main);
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(255, 255, 255, 0.18);
+      transform: translateY(-1px);
+    }
+
+    .hero-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .metric {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .metric-label {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.7rem;
+      color: #737395;
+    }
+
+    .metric-value {
+      font-size: 1rem;
+      color: #ffffff;
+    }
+
+    .hero-card {
+      border-radius: var(--radius-xl);
+      background: radial-gradient(circle at top left, rgba(240, 75, 60, 0.24), transparent 60%),
+                  radial-gradient(circle at bottom right, rgba(41, 163, 255, 0.16), transparent 60%),
+                  var(--card-bg);
+      box-shadow: var(--shadow-soft);
+      padding: 1.4rem 1.4rem 1.6rem;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at -10% -20%, rgba(255, 255, 255, 0.15), transparent 55%);
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-card-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #f8f8ff;
+    }
+
+    .hero-card-chip {
+      font-size: 0.7rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(3, 3, 10, 0.7);
+      color: var(--accent-soft);
+    }
+
+    .hero-card-body {
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      margin-bottom: 1.1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-card-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1rem 0;
+      font-size: 0.8rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-card-list li {
+      display: flex;
+      gap: 0.45rem;
+      margin-bottom: 0.4rem;
+      color: #d4d4f3;
+    }
+
+    .hero-card-list li span.bullet {
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      background: rgba(240, 75, 60, 0.15);
+      border: 1px solid rgba(240, 75, 60, 0.6);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      color: var(--accent-soft);
+      flex-shrink: 0;
+    }
+
+    .hero-card-footer {
+      border-top: 1px dashed rgba(255, 255, 255, 0.1);
+      padding-top: 0.7rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.78rem;
+      color: #c7c7e8;
+      position: relative;
+      z-index: 1;
+    }
+
+    .badge-soft {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.2rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(15, 193, 110, 0.12);
+      border: 1px solid rgba(15, 193, 110, 0.45);
+      font-size: 0.7rem;
+      color: #7ef5be;
+    }
+
+    /* Section titles */
+    .section-heading {
+      font-size: 1.4rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      max-width: 36rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .pill {
+      font-size: 0.75rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: var(--text-muted);
+      background: rgba(11, 11, 18, 0.9);
+    }
+
+    /* Why section */
+    .why-grid {
+      display: grid;
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 800px) {
+      .why-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .why-card {
+      border-radius: var(--radius-lg);
+      background: rgba(13, 13, 20, 0.9);
+      border: 1px solid var(--border-subtle);
+      padding: 1.1rem 1.1rem 1.2rem;
+      font-size: 0.86rem;
+    }
+
+    .why-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: #ffffff;
+    }
+
+    .why-meta {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #77779e;
+      margin-bottom: 0.4rem;
+    }
+
+    /* Pricing */
+    .pricing-grid {
+      display: grid;
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (min-width: 900px) {
+      .pricing-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .tier {
+      border-radius: var(--radius-lg);
+      background: var(--bg-alt);
+      border: 1px solid var(--border-subtle);
+      padding: 1.15rem 1.15rem 1.3rem;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.38);
+    }
+
+    .tier.tier-featured {
+      border: 1px solid rgba(240, 75, 60, 0.8);
+      box-shadow: 0 20px 60px rgba(240, 75, 60, 0.35);
+      background: radial-gradient(circle at top, rgba(240, 75, 60, 0.24), transparent 55%),
+                  var(--bg-alt);
+      transform: translateY(-2px);
+    }
+
+    .tier-label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .tier-name {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #f8f8ff;
+    }
+
+    .tier-chip {
+      font-size: 0.7rem;
+      padding: 0.2rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .tier-price {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .tier-subprice {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.7rem;
+    }
+
+    .tier-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .tier-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.1rem;
+      font-size: 0.8rem;
+      color: #d6d6f5;
+    }
+
+    .tier-list li {
+      display: flex;
+      gap: 0.45rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .tier-list li span.icon {
+      font-size: 0.85rem;
+      flex-shrink: 0;
+      margin-top: 0.05rem;
+    }
+
+    .tier-footer {
+      margin-top: auto;
+    }
+
+    .tier-button {
+      width: 100%;
+      padding: 0.6rem 0.85rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--text-main);
+      font-size: 0.85rem;
+      cursor: pointer;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.4rem;
+      transition: background var(--transition-fast), transform var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .tier-button:hover {
+      background: rgba(255, 255, 255, 0.07);
+      border-color: rgba(255, 255, 255, 0.24);
+      transform: translateY(-1px);
+    }
+
+    .tier-featured .tier-button {
+      background: linear-gradient(135deg, #ffb347, #f04b3c);
+      color: #161314;
+      border-color: transparent;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .tier-featured .tier-button:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.05);
+    }
+
+    .pricing-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Upsell section */
+    .upsell-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    @media (min-width: 760px) {
+      .upsell-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .upsell-card {
+      border-radius: var(--radius-lg);
+      background: rgba(11, 11, 18, 0.9);
+      border: 1px dashed rgba(255, 255, 255, 0.16);
+      padding: 1rem 1.05rem 1.1rem;
+      font-size: 0.8rem;
+    }
+
+    .upsell-tag {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #ffb347;
+      margin-bottom: 0.35rem;
+    }
+
+    .upsell-title {
+      font-size: 0.92rem;
+      margin-bottom: 0.25rem;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 800px) {
+      .contact-grid {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+        align-items: flex-start;
+      }
+    }
+
+    .contact-card {
+      border-radius: var(--radius-lg);
+      background: rgba(13, 13, 21, 0.95);
+      border: 1px solid var(--border-subtle);
+      padding: 1.2rem 1.25rem 1.35rem;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    .field label {
+      font-size: 0.8rem;
+      color: #d7d7f6;
+    }
+
+    .field input,
+    .field textarea {
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      padding: 0.55rem 0.7rem;
+      background: rgba(5, 5, 10, 0.9);
+      color: var(--text-main);
+      font-size: 0.85rem;
+      outline: none;
+      resize: vertical;
+      min-height: 2.4rem;
+    }
+
+    .field textarea {
+      min-height: 4rem;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: var(--accent-soft);
+      box-shadow: 0 0 0 1px rgba(255, 179, 71, 0.2);
+    }
+
+    .submit-btn {
+      align-self: flex-start;
+      margin-top: 0.35rem;
+    }
+
+    .contact-side {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    .contact-meta {
+      margin-top: 0.75rem;
+      font-size: 0.82rem;
+    }
+
+    .contact-meta div {
+      margin-bottom: 0.2rem;
+    }
+
+    footer {
+      padding: 1.5rem 1.25rem 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(2, 2, 6, 0.95);
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.75rem;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .footer-inner span strong {
+      color: #ffffff;
+    }
+
+    /* Small helper */
+    .muted {
+      color: var(--text-muted);
+    }
+
+    .highlight-text {
+      color: var(--accent-soft);
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 640px) {
+      .nav-links {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div class="nav">
+      <div class="nav-left">
+        <div class="logo-badge">MJ</div>
+        <div class="nav-title">
+          <div class="nav-title-main">Mojoe Digital</div>
+          <div class="nav-title-sub">Web & Local Presence for Drive-Thrus</div>
+        </div>
+      </div>
+      <div class="nav-links">
+        <a href="#why">Why This</a>
+        <a href="#pricing">Packages</a>
+        <a href="#upsell">Add-Ons</a>
+        <button class="nav-cta" type="button" onclick="scrollToSection('contact')">
+          Book a Call <span class="arrow">➜</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Overview -->
+    <section class="section hero" id="top">
+      <div class="section-inner hero-grid">
+        <div>
+          <div class="eyebrow">
+            <div class="eyebrow-dot"></div>
+            Minnicks Online Refresh · Proposal
+          </div>
+          <h1 class="hero-title">
+            Turn <span class="accent">Minnicks Drive Thru</span> into the most visible and modern drive-thru brand in town.
+          </h1>
+          <p class="hero-subtitle">
+            A simple, high-impact website and local SEO package that helps customers
+            <span class="highlight-text">find you, trust you, and drive through more often</span> —
+            without adding more work to your plate.
+          </p>
+
+          <div class="hero-buttons">
+            <button class="btn-primary" type="button" onclick="scrollToSection('pricing')">
+              View Packages <span>↓</span>
+            </button>
+            <button class="btn-secondary" type="button" onclick="scrollToSection('contact')">
+              I’m interested — let’s talk
+            </button>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric">
+              <span class="metric-label">Primary goals</span>
+              <span class="metric-value">More visits, more repeat customers</span>
+            </div>
+            <div class="metric">
+              <span class="metric-label">Core focus</span>
+              <span class="metric-value">Website · Google · Loyalty · Hiring</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Summary of what Minnicks gets">
+          <div class="hero-card-header">
+            <div>
+              <div class="hero-card-title">What Minnicks Gets</div>
+              <div class="hero-card-body">
+                A complete digital refresh so customers see Minnicks first whenever they search
+                for a drive-thru — and have a reason to keep coming back.
+              </div>
+            </div>
+            <div class="hero-card-chip">Built for Drive-Thrus</div>
+          </div>
+          <ul class="hero-card-list">
+            <li>
+              <span class="bullet">✓</span>
+              <span>Modern, mobile-first website with locations, menu, deals, and hiring.</span>
+            </li>
+            <li>
+              <span class="bullet">✓</span>
+              <span>Google Business cleanup so hours, addresses, and directions are always right.</span>
+            </li>
+            <li>
+              <span class="bullet">✓</span>
+              <span>Deals & loyalty funnel to turn “one-time stops” into repeat regulars.</span>
+            </li>
+            <li>
+              <span class="bullet">✓</span>
+              <span>Online hiring pipeline to keep each lane staffed and moving.</span>
+            </li>
+          </ul>
+          <div class="hero-card-footer">
+            <div>
+              Designed specifically around how people actually look for drive-thrus:
+              <span class="highlight-text">search · map · reviews · deals.</span>
+            </div>
+            <div class="badge-soft">
+              <span>↑</span> Built to increase daily traffic
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Why it matters -->
+    <section class="section" id="why">
+      <div class="section-inner">
+        <h2 class="section-heading">Why this matters for Minnicks</h2>
+        <p class="section-subtitle">
+          This isn’t “just a website.” It’s the system that makes sure customers hit Minnicks
+          instead of the competitor across town when they need drinks, ice, lottery, or everyday
+          essentials, right now.
+        </p>
+
+        <div class="pill-row">
+          <span class="pill">Fix online visibility</span>
+          <span class="pill">Make locations & hours obvious</span>
+          <span class="pill">Show up first on “drive thru near me”</span>
+          <span class="pill">Turn drop-ins into regulars</span>
+          <span class="pill">Smooth out hiring headaches</span>
+        </div>
+
+        <div class="why-grid">
+          <article class="why-card">
+            <div class="why-meta">Problem · Today</div>
+            <div class="why-label">Customers can’t clearly see Minnicks online.</div>
+            <p>
+              When people search for “drive thru near me,” they make decisions in seconds based
+              on what shows up in Google and Maps. If Minnicks is missing or unclear, those visits
+              go somewhere else — even if your locations are closer.
+            </p>
+          </article>
+
+          <article class="why-card">
+            <div class="why-meta">Solution · Online Refresh</div>
+            <div class="why-label">Give customers everything they need in one place.</div>
+            <p>
+              A fast, modern site with clear locations, hours, menu categories, and deals makes
+              it effortless to choose Minnicks. Add in a loyalty funnel and you’re not just
+              getting the first visit — you’re locking in the next five.
+            </p>
+          </article>
+
+          <article class="why-card">
+            <div class="why-meta">Result · Ongoing Impact</div>
+            <div class="why-label">More visits. More repeat customers. Less friction.</div>
+            <p>
+              With the basics handled — visibility, trust, directions, hiring — Minnicks can focus
+              on what it already does well: fast, friendly drive-thru service that keeps cars
+              moving and regulars happy.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section" id="pricing">
+      <div class="section-inner">
+        <h2 class="section-heading">Packages for Minnicks Drive Thru</h2>
+        <p class="section-subtitle">
+          Three levels depending on how aggressively Minnicks wants to grow its digital presence.
+          All packages are built so you don’t have to manage the tech — just the lanes.
+        </p>
+
+        <div class="pricing-grid">
+          <!-- Tier A -->
+          <article class="tier">
+            <div class="tier-label-row">
+              <div class="tier-name">Option A · Base</div>
+            </div>
+            <div class="tier-price">$1,500</div>
+            <div class="tier-subprice">One-time · get Minnicks online fast</div>
+            <p class="tier-desc">
+              Perfect if Minnicks needs a clean, professional site that fixes the basics:
+              visibility, hours, and directions.
+            </p>
+            <ul class="tier-list">
+              <li><span class="icon">✓</span><span>Modern, mobile-first website for Minnicks (Home, Locations, Menu, About, Contact).</span></li>
+              <li><span class="icon">✓</span><span>Hosting setup and basic performance optimization.</span></li>
+              <li><span class="icon">✓</span><span>Google Business profile cleanup (hours, addresses, categories).</span></li>
+              <li><span class="icon">✓</span><span>Core SEO setup for “drive thru” and local intent searches.</span></li>
+            </ul>
+            <div class="tier-footer">
+              <button class="tier-button" type="button" onclick="scrollToSection('contact')">
+                Looks right — let’s talk
+              </button>
+            </div>
+          </article>
+
+          <!-- Tier B (Featured) -->
+          <article class="tier tier-featured">
+            <div class="tier-label-row">
+              <div class="tier-name">Option B · Standard</div>
+              <div class="tier-chip">Most popular</div>
+            </div>
+            <div class="tier-price">$2,500</div>
+            <div class="tier-subprice">One-time + $50/mo · built for growth</div>
+            <p class="tier-desc">
+              Adds loyalty, deals, and hiring — the systems that turn web traffic into
+              recurring customers and a steady pipeline of staff.
+            </p>
+            <ul class="tier-list">
+              <li><span class="icon">✓</span><span>Everything in <strong>Base</strong>, plus:</span></li>
+              <li><span class="icon">✓</span><span>Deals & Loyalty page (“Minnicks Fast Lane Club”) for recurring promotions.</span></li>
+              <li><span class="icon">✓</span><span>Email / SMS capture for future deals and campaigns.</span></li>
+              <li><span class="icon">✓</span><span>Careers page with online application form (location preference & availability).</span></li>
+              <li><span class="icon">✓</span><span>Monthly content updates (hours, deals, photos) and ongoing SEO monitoring.</span></li>
+            </ul>
+            <div class="tier-footer">
+              <button class="tier-button" type="button" onclick="scrollToSection('contact')">
+                This is the one I’d recommend for Minnicks
+              </button>
+            </div>
+          </article>
+
+          <!-- Tier C -->
+          <article class="tier">
+            <div class="tier-label-row">
+              <div class="tier-name">Option C · Premium</div>
+              <div class="tier-chip">Max visibility</div>
+            </div>
+            <div class="tier-price">$4,000</div>
+            <div class="tier-subprice">One-time + $150/mo · dominate local search</div>
+            <p class="tier-desc">
+              For when Minnicks wants to be the obvious first pick across the entire region, with
+              deeper SEO, content, and light social support.
+            </p>
+            <ul class="tier-list">
+              <li><span class="icon">✓</span><span>Everything in <strong>Standard</strong>, plus:</span></li>
+              <li><span class="icon">✓</span><span>Full digital loyalty system implementation (software selection & setup).</span></li>
+              <li><span class="icon">✓</span><span>Automated or scheduled weekly deals updates.</span></li>
+              <li><span class="icon">✓</span><span>Monthly analytics reports on traffic, searches, and conversions.</span></li>
+              <li><span class="icon">✓</span><span>Light social media posting (2 posts/week for promos and reminders).</span></li>
+              <li><span class="icon">✓</span><span>Advanced local SEO work to push Minnicks up the rankings.</span></li>
+            </ul>
+            <div class="tier-footer">
+              <button class="tier-button" type="button" onclick="scrollToSection('contact')">
+                Explore Premium together
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <p class="pricing-note">
+          <strong>Note:</strong> All pricing can be adjusted based on the number of locations,
+          preferred loyalty software, and how much ongoing support Minnicks wants to keep in-house
+          versus fully managed.
+        </p>
+      </div>
+    </section>
+
+    <!-- Upsells -->
+    <section class="section" id="upsell">
+      <div class="section-inner">
+        <h2 class="section-heading">High-leverage add-ons for Minnicks</h2>
+        <p class="section-subtitle">
+          These are simple upgrades that dramatically increase how “alive” Minnicks feels online —
+          and they drop neatly on top of any package.
+        </p>
+
+        <div class="upsell-grid">
+          <article class="upsell-card">
+            <div class="upsell-tag">Loyalty</div>
+            <div class="upsell-title">Digital punch card / loyalty setup · $300 one-time</div>
+            <p>
+              A simple loyalty mechanism (“Fast Lane Club”) that rewards repeat visits. This can
+              be app-based, card-based with digital tracking, or integrated into a third-party
+              platform depending on what fits Minnicks best.
+            </p>
+          </article>
+
+          <article class="upsell-card">
+            <div class="upsell-tag">Promotions</div>
+            <div class="upsell-title">Monthly deals graphics · $50/mo</div>
+            <p>
+              Clean, on-brand graphics for the website and social media that highlight seasonal
+              offers, game-day bundles, or holiday promotions — without your team having to design
+              anything in-house.
+            </p>
+          </article>
+
+          <article class="upsell-card">
+            <div class="upsell-tag">Reach</div>
+            <div class="upsell-title">SMS blast setup · $25/mo + SMS fees</div>
+            <p>
+              Collect customer phone numbers (with proper consent) and send targeted texts for big
+              moments: heat waves, storms, sports events, or holiday weekends. Simple and highly
+              effective for drive-thru behavior.
+            </p>
+          </article>
+
+          <article class="upsell-card">
+            <div class="upsell-tag">Visuals</div>
+            <div class="upsell-title">On-site photo session · ~$200+</div>
+            <p>
+              Photos of the lanes, menu boards, team, and exterior that make the site feel like
+              the real Minnicks customers know. This can be handled directly by me or through a
+              local photographer, depending on timing and budget.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / CTA -->
+    <section class="section" id="contact">
+      <div class="section-inner">
+        <h2 class="section-heading">Next step: a quick alignment call</h2>
+        <p class="section-subtitle">
+          If this direction feels right for Minnicks, the next move is simple: a short call to
+          confirm goals, locations, and timelines. From there, I handle the build — Minnicks keeps
+          focusing on moving cars through the lanes.
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <form class="contact-form">
+              <div class="field">
+                <label for="name">Name</label>
+                <input id="name" type="text" placeholder="Your name" />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="you@example.com" />
+              </div>
+              <div class="field">
+                <label for="company">Company</label>
+                <input id="company" type="text" placeholder="Minnicks Drive Thru" />
+              </div>
+              <div class="field">
+                <label for="message">What would you like this project to accomplish?</label>
+                <textarea
+                  id="message"
+                  placeholder="Example: “We want customers to stop guessing our hours, and we need a better way to hire staff for each location.”"
+                ></textarea>
+              </div>
+              <button class="btn-primary submit-btn" type="button">
+                Send (or export this page & email it)
+              </button>
+            </form>
+          </div>
+          <div class="contact-side">
+            <p>
+              On the call, we’ll cover:
+            </p>
+            <ul>
+              <li>How many locations to include in the first phase.</li>
+              <li>Which package feels right (Base, Standard, or Premium).</li>
+              <li>Loyalty and deals strategy that fits Minnicks’ customer base.</li>
+              <li>Rough launch timeline and any seasonal deadlines.</li>
+            </ul>
+            <div class="contact-meta">
+              <div><strong>Contact:</strong> You can replace this block with your real phone & email.</div>
+              <div><span class="muted">Example:</span> joe@mojoedigital.com · (555) 555-5555</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>© <span id="year"></span> <strong>Mojoe Digital</strong>. Proposal prepared for Minnicks Drive Thru.</span>
+      <span class="muted">Simple, high-impact web systems for drive-thrus and local operators.</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+  function scrollToSection(id) {
+    var el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
